@@ -1,0 +1,15 @@
+<h1>Search Movies</h1>
+
+<form action="/movies" method="GET">
+    <label for="nameFilter">Enter a Movie Name:</label>
+    <input type="text" id="nameFilter" name="q" />
+    <input type="submit" />
+</form>
+
+<div class="container">
+    <ul>
+        <% data.forEach(d => { %>
+        <li><a href="/movies/<%= d.imdbID %>"><%= d.Title %></a></li>
+        <% }) %>
+    </ul>
+</div>
